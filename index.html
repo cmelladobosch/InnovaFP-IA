@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iEduca Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-graduation-cap"></i> iEduca
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i> Inici</a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-calendar"></i> Calendari</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-book"></i> Deures</a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-clock"></i> Horari</a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-envelope"></i> Comunicats</a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-file-lines"></i> Documents</a>
+
+                <div class="nav-section">Alumnat</div>
+                <a href="#" class="nav-item"><i class="fa-solid fa-users-viewfinder"></i> Classes</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-clipboard-user"></i> Assistència</a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-comments"></i> Comentaris</a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-calendar-check"></i> Planificació</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-chart-line"></i> Seguiment</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-award"></i> Qualificacions</a>
+
+                <div class="nav-section">Administració</div>
+                <a href="#" class="nav-item"><i class="fa-regular fa-user"></i> Usuaris</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-file-signature"></i> Preinscripcions</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-address-card"></i> Matrícules</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-square-poll-horizontal"></i> Enquestes</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i> Configuració</a>
+            </div>
+        </aside>
+
+        <!-- Main Content Wrapper -->
+        <div class="main-wrapper">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                    <div class="school-selector">
+
+                        <div class="school-info">
+                            <span class="school-name">Girona</span>
+                            <span class="school-year">Curs 2025/2026</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="topbar-center">
+                    <h1 class="topbar-title">Projecte InnovaFP: Millorem la UX usant la IA local</h1>
+                </div>
+                <div class="topbar-right">
+                    <div class="notification-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span class="badge">12</span>
+                    </div>
+                    <div class="user-profile">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="main-content">
+
+                <div class="dashboard-content">
+                    <!-- Informative Banner -->
+                    <div class="info-banner widget">
+                        <h2><i class="fa-solid fa-circle-info"></i> Informació del Projecte</h2>
+                        <p><strong>Funcionalitat a testejar:</strong> Millora de la UX en el control d'assistència per part del professorat.</p>
+                        <p><strong>Estat inicial:</strong> Formulari HTML+CSS on s'indica l'assistència alumne per alumne a partir d'una llista.</p>
+                        <p><strong>Proposta de millora UX:</strong> Assistent IA on el professor informa de l'assistència usant LLM (mitjançant text o veu).</p>
+                    </div>
+
+                    <!-- Interactive Area -->
+                    <div class="demo-area">
+                        <!-- Left: JSON Output -->
+                        <div class="json-panel widget">
+                            <h3 class="panel-title"><i class="fa-solid fa-code"></i> Resultat JSON</h3>
+                            <pre class="json-code"><code>{
+  "assistencia": {
+    "data": "2026-06-12",
+    "estat": "Esperant entrada de l'assistent..."
+  }
+}</code></pre>
+                        </div>
+                        
+                        <!-- Right: AI Assistant Input -->
+                        <div class="assistant-panel widget">
+                            <h3 class="panel-title"><i class="fa-solid fa-robot"></i> Assistent d'Assistència IA</h3>
+                            <div class="assistant-chat-area">
+                                <div class="chat-placeholder">
+                                    <i class="fa-solid fa-microphone-lines"></i>
+                                    <p>Estic a l'escolta. Indica les faltes d'assistència.</p>
+                                </div>
+                            </div>
+                            <div class="assistant-input-area">
+                                <input type="text" placeholder="Ex: El Joan i la Maria falten avui..." id="ia-input">
+                                <button class="mic-btn" title="Parlar per veu"><i class="fa-solid fa-microphone"></i></button>
+                                <button class="send-btn" title="Processar text"><i class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+</body>
+
+</html>
